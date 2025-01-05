@@ -43,13 +43,7 @@ jobs:
       - name: 下载项目依赖
         run: flutter pub get
 
-# 添加以下步骤
-      - name: 打印JAVA Version
-        run: java -version
 
-      - name: 打印flutter环境
-        run: flutter doctor      
-      
 
       - name: flutter build apk
         run: flutter build apk --release --split-per-abi
@@ -82,14 +76,17 @@ jobs:
       - name: flutter build ipa
         run: |
           flutter build ios --release --no-codesign 
-          ln -sf ./build/ios/iphoneos Payload   #  这一步是否有必要你来检查，它创建了一个叫Payload的软链接，你可能不需要
-          zip -r9 app.ipa Payload/   #  打包Payload这个文件夹下的runner.app, 生成app.ipa文件
+          cd build/ios/archive/Runner.xcarchive
+          mkdir Payload
+          cp -r Products/Applications/Runner.app Payload/
+          zip -r app.ipa Payload/
+          mv app.ipa ../../../app.ipa
 
       - name: 上传
         uses: actions/upload-artifact@v3
         with:
           name: Pilipala-Release
-          path: build/ios/app.ipa  # 确保这里是你构建的ipa的正确路径
+          path: build/app.ipa  # 修改为正确的ipa路径
   upload:
     runs-on: ubuntu-latest
 
