@@ -76,17 +76,18 @@ jobs:
       - name: flutter build ipa
         run: |
           flutter build ios --release --no-codesign 
-          cd build/ios/archive/Runner.xcarchive
+          cd build/ios/iphoneos
           mkdir Payload
-          cp -r Products/Applications/Runner.app Payload/
+          cp -r Runner.app Payload/
           zip -r app.ipa Payload/
-          mv app.ipa ../../../app.ipa
+          mv app.ipa ../../app.ipa
 
       - name: 上传
         uses: actions/upload-artifact@v3
         with:
           name: Pilipala-Release
-          path: build/app.ipa  # 修改为正确的ipa路径
+          path: build/app.ipa
+
   upload:
     runs-on: ubuntu-latest
 
