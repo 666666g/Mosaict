@@ -1,25 +1,4 @@
-<div align="center">
-    <img width="200" height="200" src="https://github.com/guozhigq/pilipala/blob/main/assets/images/logo/logo_android.png">
-</div>
 
-<div align="center">
-    <h1>PiliPala</h1>
-<div align="center">
-    
-![GitHub repo size](https://img.shields.io/github/repo-size/guozhigq/pilipala) 
-![GitHub Repo stars](https://img.shields.io/github/stars/guozhigq/pilipala) 
-![GitHub all releases](https://img.shields.io/github/downloads/guozhigq/pilipala/total) 
-
-</div>
-    <p>使用 Flutter 开发的 BiliBili 第三方客户端</p>
-    
-<img src="https://github.com/guozhigq/pilipala/blob/main/assets/screenshots/510shots_so.png" width="32%" alt="home" />
-<img src="https://github.com/guozhigq/pilipala/blob/main/assets/screenshots/174shots_so.png" width="32%" alt="home" />
-<img src="https://github.com/guozhigq/pilipala/blob/main/assets/screenshots/850shots_so.png" width="32%" alt="home" />
-<br/>
-<img src="https://github.com/guozhigq/pilipala/blob/main/assets/screenshots/main_screen.png" width="96%" alt="home" />
-<br/>
-</div>
 
 ## 开发环境
 
