@@ -83,7 +83,7 @@ jobs:
           mv app.ipa ../../app.ipa
 
       - name: 上传
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Pilipala-Release
           path: build/app.ipa
